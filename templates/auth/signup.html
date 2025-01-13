@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<!---Coding By CoderGirl | www.codinglabweb.com--->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<title>Login & Registration Form | CoderGirl</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="{% static 'css/auth/style.css' %}">
+</head>
+
+<body>
+    <div className="blur" id="blur-1"></div>
+    <div className="blur" id="blur-2"></div>
+    <div class="container">
+        <div class="a-left">
+            <img src="{% static 'assets/logo.png' %}" alt="logo" />
+            <div class="webName">
+                <h1>Subham.io Video Chat</h1>
+                <h6>Explore the ideas throughout the world</h6>
+            </div>
+        </div>
+        <div class="form-box">
+            <header>Signup</header>
+            <form action="{% url 'register' %}" method="POST" class="form">
+                {% csrf_token %}
+                <div class="input-name">
+                    <div class="">
+                        <label for="first_name">First Name</label>
+                        <input type="text" placeholder="Enter your first name" name="first_name">
+                    </div>
+                    <div class="">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" placeholder="Enter your last name" name="last_name">
+                    </div>
+                </div>
+                <div class="">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter your email" name="email">
+                </div>
+                <div class="">
+                    <label for="password1">Password</label>
+                    <input type="password" placeholder="Create a password" name="password1">
+                </div>
+                <div class="">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password" name="password2">
+                </div>
+                <input type="submit" class="button" value="Sign Up">
+                <center>
+                    {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                </center>
+
+            </form>
+            <div class="signup">
+                <span class="signup">Already have an account?
+                    <a href="{% url 'login' %}"><label for="check">Signin</label></a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
