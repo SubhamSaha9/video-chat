@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -31,4 +32,8 @@ def login_view(request):
             return render(request, 'auth/login.html', {'error': "Invalid credentials. Please try again."})
 
     return render(request, 'auth/login.html')
+
+@login_required
+def dashboard(request):
+    return render(request, 'dashboard/dashboard.html', {'name': request.user.first_name})
 
