@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
+from .middleware import *
+from django.views.decorators.cache import never_cache
 
 # Create your views here.
-
+@guest
 def index(request):
     return render(request, 'index.html')
 
+@guest
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -20,6 +22,7 @@ def register(request):
 
     return render(request, 'auth/signup.html')
 
+@guest
 def login_view(request):
     if request.method=="POST":
         email = request.POST.get('email')
@@ -33,16 +36,24 @@ def login_view(request):
 
     return render(request, 'auth/login.html')
 
-@login_required
+@never_cache
+@auth
 def dashboard(request):
     return render(request, 'dashboard/dashboard.html', {'name': request.user.first_name})
 
-@login_required
+
+@auth
+def videocall(request):
+    return render(request, 'dashboard/videocall.html', {'name': request.user.first_name + " " + request.user.last_name})
+
+
+@auth
 def logout_view(request):
     logout(request)
     return redirect("/login")
 
-@login_required
+
+@auth
 def join_room(request):
     if request.method == 'POST':
         roomID = request.POST['roomID']
