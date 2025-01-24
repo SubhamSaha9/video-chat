@@ -80,207 +80,207 @@ python manage.py runserver
 <details>
 <summary><code>style.css</code></summary>
 
-    ```css
-    /* Import Google font - Poppins */
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+```css
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    :root {
-    --yellow: #f5c32c;
-    --orange: #fca61f;
-    --black: #242d49;
-    --gray: rgba(36, 45, 73, 0.65);
-    --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
-    --hrColor: #cfcdcd;
-    --cardColor: rgba(255, 255, 255, 0.64);
-    --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
-    --buttonBgHover: linear-gradient(98.63deg, #d98919 0%, #d13205 100%);
-    --inputColor: rgba(40, 52, 62, 0.07);
-    --photo: #4cb256;
-    --video: #4a4eb7;
-    --location: #ef5757;
-    --schedule: #e1ae4a;
-    }
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: rgba(36, 45, 73, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: rgba(255, 255, 255, 0.64);
+  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --buttonBgHover: linear-gradient(98.63deg, #d98919 0%, #d13205 100%);
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --schedule: #e1ae4a;
+}
 
-    body {
-    overflow: hidden;
-    color: #242d49;
-    background-color: #f3f3f3;
-    padding: 1rem 1rem;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+body {
+  overflow: hidden;
+  color: #242d49;
+  background-color: #f3f3f3;
+  padding: 1rem 1rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .intro {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    }
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 
-    .intro-left img {
-    height: 30rem;
-    }
+.intro-left img {
+  height: 30rem;
+}
 
-    .intro-right {
-    height: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    }
-    .intro-right > h1 {
-    font-size: 2.3rem;
-    background-color: red;
-    background-image: var(--buttonBg);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    }
+.intro-right {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.intro-right > h1 {
+  font-size: 2.3rem;
+  background-color: red;
+  background-image: var(--buttonBg);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
-    .intro-right a {
-    width: 50%;
-    margin: 1rem 0;
-    background-image: var(--buttonBg);
-    padding: 5px 10px;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    }
+.intro-right a {
+  width: 50%;
+  margin: 1rem 0;
+  background-image: var(--buttonBg);
+  padding: 5px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
 
-    .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 0 5px 10px rgba(246, 76, 76, 0.464);
-    }
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(246, 76, 76, 0.464);
+}
 
-    .container .form {
-    padding: 2rem;
-    }
+.container .form {
+  padding: 2rem;
+}
 
-    .form header {
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    }
+.form header {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
-    .form input {
-    height: 60px;
-    width: 100%;
-    padding: 0 15px;
-    font-size: 17px;
-    margin-bottom: 1.3rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    }
+.form input {
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
 
-    .form input:focus {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-    }
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
 
-    .form input.button {
-    color: #fff;
-    background-image: var(--buttonBg);
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-top: 1.7rem;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    }
+.form input.button {
+  color: #fff;
+  background-image: var(--buttonBg);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
 
-    .form input.button:hover {
-    background-image: var(--buttonBgHover);
-    }
+.form input.button:hover {
+  background-image: var(--buttonBgHover);
+}
 
-    /* center the div named dashboard */
-    .dashboard {
-    width: 60%;
-    height: 50%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #242d49;
-    background-color: #f3f3f3;
-    border: 2px solid #f94b1a58;
-    border-radius: 7px;
-    box-shadow: 0 5px 10px rgba(246, 76, 76, 0.464);
-    }
+/* center the div named dashboard */
+.dashboard {
+  width: 60%;
+  height: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #242d49;
+  background-color: #f3f3f3;
+  border: 2px solid #f94b1a58;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(246, 76, 76, 0.464);
+}
 
-    /** align the text inside the div named dashboard to the center */
-    .dashboard h1 {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    }
+/** align the text inside the div named dashboard to the center */
+.dashboard h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
 
-    .dashboard h1 > span {
-    background-color: red;
-    background-image: var(--buttonBg);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    }
+.dashboard h1 > span {
+  background-color: red;
+  background-image: var(--buttonBg);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
-    .dashboard a {
-    background-image: var(--buttonBg);
-    border: none;
-    border-radius: 7px;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    color: white;
-    }
+.dashboard a {
+  background-image: var(--buttonBg);
+  border: none;
+  border-radius: 7px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color: white;
+}
 
-    .dashboard a {
-    margin-top: 7px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    }
+.dashboard a {
+  margin-top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
-    .dashboard a:hover {
-    background-image: var(--buttonBgHover);
-    }
+.dashboard a:hover {
+  background-image: var(--buttonBgHover);
+}
 
-    .dashboard {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-    ```
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
 
 </details>
 
