@@ -59,14 +59,6 @@ cd myproject
 git clone https://github.com/SubhamSaha9/video-chat.git .
 ```
 
-**Set Up Environment Variables**
-
-Will be implemented later
-
-```env
-
-```
-
 Replace the values with your actual [GegoCloud](https://www.googleadservices.com) credentials.
 
 **Running the Project**
