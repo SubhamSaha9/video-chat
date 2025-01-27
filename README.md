@@ -59,6 +59,13 @@ cd myproject
 git clone https://github.com/SubhamSaha9/video-chat.git .
 ```
 
+Create a file named `creds.py` inside the `vide_chat` folder and add the credentials.
+
+```env
+appID =
+serverSecret = ""
+```
+
 Replace the values with your actual [GegoCloud](https://www.googleadservices.com) credentials.
 
 **Running the Project**
@@ -66,6 +73,8 @@ Replace the values with your actual [GegoCloud](https://www.googleadservices.com
 ```bash
 python manage.py runserver
 ```
+
+Open `http://127.0.0.1:8000` in your browser to visit the page.
 
 ## <a name="snippets">🕸️ Code Snippets</a>
 
