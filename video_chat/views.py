@@ -3,6 +3,7 @@ from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from .middleware import *
 from django.views.decorators.cache import never_cache
+from .creds import appID, serverSecret
 
 # Create your views here.
 @guest
@@ -44,7 +45,7 @@ def dashboard(request):
 
 @auth
 def videocall(request):
-    return render(request, 'dashboard/videocall.html', {'name': request.user.first_name + " " + request.user.last_name})
+    return render(request, 'dashboard/videocall.html', {'name': request.user.first_name + " " + request.user.last_name, "appID": appID, "serverSecret": serverSecret})
 
 
 @auth
